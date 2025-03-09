@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Kanyamkago Comrade Organization (WEKACoA)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: url('C:/Users/hp/Desktop/comrade-IMG-20250302-WA0013.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .title-container img {
+            margin-right: 10px;
+        }
+        h1 {
+            color: #2fd337;
+            margin: 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: green;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        .success-message {
+            display: none;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <img src="IMG-20250302-WA0013.jpg" alt="Logo" width="60" height="60">
+            <h1>West Kanyamkago Comrade Organization (WEKACoA)</h1>
+        </div>
+        <form id="memberForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="nationalIdBack">National ID (Back Side pdf ONLY)</label>
+                <input type="file" id="nationalIdBack" name="nationalIdBack" accept="application/pdf" required>
+            </div>
+            <div class="form-group">
+                <label for="faceScan">Face Scan</label>
+                <input type="file" id="faceScan" name="faceScan" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="membershipType">Membership Type</label>
+                <select id="membershipType" name="membershipType" required>
+                    <option value="">Select Membership Type</option>
+                    <option value="regular">Regular Member</option>
+                    <option value="support">Supporting Member</option>
+                    <option value="honorary">Honorary Member</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="skills">Skills (comma separated)</label>
+                <input type="text" id="skills" name="skills">
+            </div>
+            <div class="form-group">
+                <label for="ward">Ward</label>
+                <select id="ward" name="ward" required>
+                    <option value="WEST KANYAMKAGO">WEST KANYAMKAGO</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" name="location" required>
+                    <option value="">Select Location</option>
+                    <option value="WEST KANYAMKAGO">WEST KANYAMKAGO</option>
+                    <option value="UPPER WEST">UPPER WEST</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pollingStation">Polling Station</label>
+                <select id="pollingStation" name="pollingStation" required>
+                    <option value="">Select Polling Station</option>
+                    <option value="GOT KODERO PRIMARY">GOT KODERO PRIMARY</option>
+                    <option value="KAMBOGO PRIMARY">KAMBOGO PRIMARY</option>
+                    <option value="KONDURU PRIMARY">KONDURU PRIMARY</option>
+                    <option value="ONDATI PRIMARY">ONDATI PRIMARY</option>
+                    <option value="OYANI PRIMARY">OYANI PRIMARY</option>
+                    <option value="DAGO PRIMARY">DAGO PRIMARY</option>
+                    <option value="GOD JAOKO PRIMARY">GOD JAOKO PRIMARY</option>
+                    <option value="GOD SIBUOCHE PRIMARY">GOD SIBUOCHE PRIMARY</option>
+                    <option value="GOGO PRIMARY">GOGO PRIMARY</option>
+                    <option value="HOLO KAYUDA PRIMARY">HOLO KAYUDA PRIMARY</option>
+                    <option value="MIDIDA PRIMARY">MIDIDA PRIMARY</option>
+                    <option value="MILIMANI PRIMARY">MILIMANI PRIMARY</option>
+                    <option value="ONG'ENG'A PRIMARY">ONG'ENG'A PRIMARY</option>
+                    <option value="ONGORO PRIMARY">ONGORO PRIMARY</option>
+                    <option value="PUCHE PRIMARY">PUCHE PRIMARY</option>
+                    <option value="GOD KORWA PRIMARY">GOD KORWA PRIMARY</option>
+                    <option value="MARK NYAMITA WANG'CHIENG'">MARK NYAMITA WANG'CHIENG'</option>
+                    <option value="MARUMKOKIRI PRIMARY">MARUMKOKIRI PRIMARY</option>
+                    <option value="MISITA PRIMARY">MISITA PRIMARY</option>
+                    <option value="NYABINGA PRIMARY">NYABINGA PRIMARY</option>
+                    <option value="NYAMAGE PRIMARY">NYAMAGE PRIMARY</option>
+                    <option value="OSOGO PRIMARY">OSOGO PRIMARY</option>
+                    <option value="CHIEF KAWISA PRIMARY">CHIEF KAWISA PRIMARY</option>
+                    <option value="SIRO SECONDARY">SIRO SECONDARY</option>
+                </select>
+            </div>
+            
+            <button type="submit">Register Membership</button>
+        </form>
+        
+        <div id="successMessage" class="success-message">
+            <h3>Registration Successful!</h3>
+            <p>Thank you for joining the Comrade Organization. A confirmation email has been sent to your registered email address.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('memberForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // This is a simplified simulation for demonstration purposes
+            
+            // Get form data
+            const formData = new FormData(this);
+            const memberData = {};
+            
+            // Convert FormData to object
+            for (let [key, value] of formData.entries()) {
+                memberData[key] = value;
+            }
+            
+            // Log the data (in a real app, this would be sent to server)
+            console.log('Member Registration Data:', memberData);
+            
+            // Simulate server processing and email sending
+            setTimeout(function() {
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Reset form
+                document.getElementById('memberForm').reset();
+                
+                // In a real application, the following would happen on the server:
+                // 1. Data validation
+                // 2. Store data in database
+                // 3. Generate member ID
+                // 4. Send confirmation email with registration details
+                
+                // After 5 seconds, hide success message
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
